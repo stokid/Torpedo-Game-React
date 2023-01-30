@@ -83,7 +83,7 @@ class Player {
                     this.lineType = 2;
                 } else {
                     console.error('At start, it is not known vertical or horizontal! ');
-                    return {senderID: -1, type: -4, text: 'At start, it is not known vertical or horizontal!'}; // Invalid field! 
+                    return {senderID: -1, type: -4, text: 'Ez a kiinduló pont. Kezd el - függőlegesen, vagy vízszintesen - sorban lerakni a hajó részeit!'}; // Invalid field! 
                 }
             }
         }
