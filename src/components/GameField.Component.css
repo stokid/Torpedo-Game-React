@@ -1,0 +1,4 @@
+.GameField {
+    display: flex;
+    flex-direction: column;
+}

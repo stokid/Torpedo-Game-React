@@ -1,0 +1,46 @@
+.Message {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    padding: 1%;
+    
+    background-color: rgb(220, 144, 63);
+    border-radius: 10px;
+}
+
+.sendMessage {
+    max-width: 70%;
+    align-self: flex-start;
+    background-color: #77b7f0;
+}
+.getMessage {
+    max-width: 70%;
+    align-self: flex-end;
+    background-color: rgb(200, 200, 200);
+}
+
+.meta {
+    display: flex;
+    font-size: small;
+    font-weight: bolder;
+    margin: 5px 5px 0px 5px;
+}
+.username {
+    margin-right: 5px;
+}
+.text {
+    margin: 5px 5px 5px 5px;
+}
+.getMessage > .meta  {
+    justify-content: flex-end;
+}
+.getMessage > .text  {
+    display: flex;
+    justify-content: flex-end;
+}
+.error {
+    background-color: #ff0030;
+}
+.succes {
+    background-color: #3ed6b5;
+}

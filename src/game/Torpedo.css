@@ -1,0 +1,11 @@
+#canvas {
+    background-color: #b5d1fe;
+    animation-name: canvasAnimate;
+    animation-duration: 3s;
+}
+
+
+@keyframes canvasAnimate {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}

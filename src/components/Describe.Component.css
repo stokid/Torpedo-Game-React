@@ -1,0 +1,9 @@
+.Describe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Describe > ul {
+    list-style-type: none;
+    padding: 20px;
+}
