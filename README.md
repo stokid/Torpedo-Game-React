@@ -9,4 +9,8 @@
 <sub>docker build -t torpedo-game-react .</sub>
 
 ### Start container:
-<sub>docker container run -p 3000:3000 -v ${PWD}:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react</sub> 
+##### On Windows:
+<sub>docker container run -p 3000:3000 -v ${PWD}:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react</sub>
+
+##### On Mac:
+<sub>docker container run -p 3000:3000 -v $PWD:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react</sub> 
