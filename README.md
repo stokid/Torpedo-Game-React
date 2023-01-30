@@ -17,9 +17,8 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
-    <li>
-      <a href="#project-preview">Project preview</a>
-    </li>
+    <li><a href="#project-preview">Project preview</a></li>
+    <li><a href="#languages">Languages</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -52,6 +51,11 @@ The game has a chat component where the Bot helps you what you have to do.
    <img width="19.2%" alt="05" src=""> 
 </p>
 
+## Languages
+The page's language available just Hungarian at now, but also prepared in English. Even so the Torpedo is playable very easy.
+
+- Hungarian
+- English (prepare)
 
 <!-- GETTING STARTED -->
 ## Getting Started
