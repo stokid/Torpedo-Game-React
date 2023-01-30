@@ -96,7 +96,7 @@ class Player {
                 if (player.ships[i].coordinates[j].every((element, index) => (element === coordinate[index]))) {
                     isOccupied = true;
                     console.error('This filed is occupied!')
-                    return {senderID: -1, type: -3, text: 'This filed is occupied!'} ; // Invalid field!
+                    return {senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!'} ; // Invalid field!
                 }
             }
         }
@@ -105,35 +105,35 @@ class Player {
             if (this.coordinatesPuffer[i].every((element, index) => (element === coordinate[index]))) {
                 isOccupied = true;
                 console.error('This filed is occupied!')
-                return {senderID: -1, type: -3, text: 'This filed is occupied!'}; // Invalid field!
+                return {senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!'}; // Invalid field!
             }
         }
 
         if (isOccupied) {
             console.error('This filed is occupied!')
-            return {senderID: -1, type: -3, text: 'This filed is occupied!'}; // Invalid field!
+            return {senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!'}; // Invalid field!
         }
         if (this.lineType === 1) {
             
             if (lastCoordinate[1] !== coordinate[1]) {
                 console.error('Line has to be horizontal')
-                return {senderID: -1, type: -2, text: 'Line has to be horizontal'}; // Invalid field!
+                return {senderID: -1, type: -2, text: 'Ezt a hajót vízszintesen kell kijelölnöd!'}; // Invalid field!
             }
             if (lastCoordinate[0] !== coordinate[0] + 1 && lastCoordinate[0] !== coordinate[0] - 1
                 && this.coordinatesPuffer[0][0] !== coordinate[0] + 1 && this.coordinatesPuffer[0][0] !== coordinate[0] - 1) {
                 console.error('This field is too far (horizontal).')
-                return {senderID: -1, type: -2, text: 'This field is too far (horizontal).'}; // Invalid field!
+                return {senderID: -1, type: -2, text: 'A kijelölt mező túl messze van az utolsónak lerakotthoz képest!'}; // Invalid field!
             }
         }
         if (this.lineType === 2) {
             if (lastCoordinate[0] !== coordinate[0]) {
                 console.error('Line has to be vertical')
-                return {senderID: -1, type: -2, text: 'Line has to be vertical'}; // Invalid field!
+                return {senderID: -1, type: -2, text: 'Ezt a hajót függőleges irányban kell kijelölnöd!'}; // Invalid field!
             }
             if (lastCoordinate[1] !== coordinate[1] + 1 && lastCoordinate[1] !== coordinate[1] - 1
                 && this.coordinatesPuffer[0][1] !== coordinate[1] + 1 && this.coordinatesPuffer[0][1] !== coordinate[1] - 1) {
                 console.error('This field is too far (vertical).')
-                return {senderID: -1, type: -2, text: 'This field is too far (vertical).'}; // Invalid field!
+                return {senderID: -1, type: -2, text: 'A kijelölt mező túl messze van az utolsónak lerakotthoz képest!'}; // Invalid field!
             }
         }
 
