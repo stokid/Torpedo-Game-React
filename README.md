@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -8,20 +10,99 @@
 
 # Torpedo-Game-React
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li>
+      <a href="#project-preview">Project preview</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#run-in-docker">Run in Docker</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-## Run in Docker
 
-#### At first enter the folder where Dockerfile can be found.
 
-### Build image:
-<sub>docker build -t torpedo-game-react .</sub>
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### Start container:
-##### On Windows:
-<sub>docker container run -p 3000:3000 -v ${PWD}:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react</sub>
+I have just made a classic Torpedo game from our childhood. It is a two-person game which playable on PC or smartpfone.
+The game's screen can orient your device on every refresh. So you can play on stationary also landscape screen.
+The game has a chat component where the Bot helps you what you have to do.
 
-##### On Mac:
-<sub>docker container run -p 3000:3000 -v $PWD:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react</sub>
+<!-- PROJECT PREVIEW -->
+## Project preview
+
+<p align="center">
+   <img width="19.2%" alt="01" src=""> 
+   <img width="19.2%" alt="02" src=""> 
+   <img width="19.2%" alt="03" src=""> 
+   <img width="19.2%" alt="04" src=""> 
+   <img width="19.2%" alt="05" src=""> 
+</p>
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+You can run the app only your OS, or it also can be run in Docker container.
+
+### Prerequisites
+
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/stokid/Torpedo-Game-React.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Start the app`
+   ```js
+   npm start
+   ```
+
+### Run in Docker
+##### At first enter the folder where Dockerfile can be found.
+#### Build image:
+ ```sh
+   docker build -t torpedo-game-react .
+   ```
+#### Start container:
+###### On Windows:
+ ```sh
+   docker container run -p 3000:3000 -v ${PWD}:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react
+   ```
+###### On Mac:
+```sh
+   docker container run -p 3000:3000 -v $PWD:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react
+   ```
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
