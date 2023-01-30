@@ -152,18 +152,20 @@ const Torpedo = () => {
 
         //Put down ships
         if (clickBoardIsActive && status.settingsCondition < 4) {
-            ctx.beginPath();
-            ctx.globalAlpha = 0.6;
-            ctx.fillStyle = "#FF0000";
-            ctx.fillRect(dx * squareWidth + 2, dy * squareWidth + 2, squareWidth - 4, squareWidth - 4);
-            ctx.stroke();
             const result = addPlayerShips(actualPlayer, coordinate);
-
+            
             if (result.type < 0) {
                 const message = addChatMessage(result.senderID, result.type, result.text)
                 statusSetTempMessage(message);
             }
-            else if (result.type === 1) {
+            else if (result.type === 0 || result.type === 1 || result.type === 2) {
+                ctx.beginPath();
+                ctx.globalAlpha = 0.6;
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(dx * squareWidth + 2, dy * squareWidth + 2, squareWidth - 4, squareWidth - 4);
+                ctx.stroke();
+            }
+            if (result.type === 1) {
                 /* const message = addChatMessage(result.senderID, result.type, result.text )
                 statusSetTempMessage(message); */
                 setShipEventID(shipEventID + 1);
