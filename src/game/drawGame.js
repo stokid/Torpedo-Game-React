@@ -32,7 +32,7 @@ export default function drawGame(ctx, canvas, gridNum, squareWidth, shipsImage, 
                         let dx = inactivePlayerStatus.revealedCoordinates[i][0];
                         let dy = inactivePlayerStatus.revealedCoordinates[i][1];
 
-                        ctx.fillStyle = 'red';
+                        ctx.fillStyle = 'green';
                         ctx.fillRect(dx * squareWidth, dy * squareWidth, squareWidth, squareWidth);
                     }
                 }
@@ -45,7 +45,7 @@ export default function drawGame(ctx, canvas, gridNum, squareWidth, shipsImage, 
                         let dx = inactivePlayerStatus.revealedCoordinates[i][0];
                         let dy = inactivePlayerStatus.revealedCoordinates[i][1];
 
-                        ctx.fillStyle = 'red';
+                        ctx.fillStyle = 'green';
                         ctx.fillRect(dx * squareWidth, dy * squareWidth, squareWidth, squareWidth);
                     }
                 }
@@ -140,7 +140,7 @@ export default function drawGame(ctx, canvas, gridNum, squareWidth, shipsImage, 
                         default: return;
                     }
 
-                    ctx.fillStyle = '#bd2828';
+                    ctx.fillStyle = '#36bf63';
                     ctx.fillRect(minDx * squareWidth, minDy * squareWidth, squareWidth, sunkenShip.length * squareWidth);
                     ctx.drawImage(img, minDx * squareWidth, minDy * squareWidth, squareWidth, sunkenShip.length * squareWidth)
 
@@ -166,7 +166,7 @@ export default function drawGame(ctx, canvas, gridNum, squareWidth, shipsImage, 
 
                    /*  console.log(img); */
 
-                    ctx.fillStyle = '#bd2828';
+                    ctx.fillStyle = '#36bf63';
                     ctx.fillRect(minDx * squareWidth, minDy * squareWidth, sunkenShip.length * squareWidth, squareWidth);
                     ctx.drawImage(img, minDx * squareWidth, minDy * squareWidth, sunkenShip.length * squareWidth, squareWidth)
                 }
