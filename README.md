@@ -1,5 +1,6 @@
 <a name="readme-top"></a>
 
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -9,6 +10,7 @@
 
 
 # Torpedo-Game-React
+![visitors](https://visitor-badge.glitch.me/badge?right_color=teal&page_id=stokid/Torpedo-Game-React)
 
 <!-- TABLE OF CONTENTS -->
 <details>
