@@ -11,6 +11,9 @@
     height: 5%;
     width: 100%;
     background-color: #a1c5ff;
-    box-shadow: 0px 10px 10px #a1c5ff;
+    box-shadow: 3px 1px 5px 3px #a1c5ff
+}
+.shadowToDashBoard {
+    height: 5px;
 }
 

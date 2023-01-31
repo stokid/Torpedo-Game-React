@@ -13,6 +13,7 @@ function MainField({ width, height }) {
                 <div id="connectionFeedback" className="connectionFeedback">Connection Feedback</div>
                 <MenuBar />
             </div>
+            <div className="shadowToDashBoard"></div>
             <Chat />
         </div>
     );
