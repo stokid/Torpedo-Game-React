@@ -22,6 +22,9 @@
     width: 100%;
     text-align: center;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .overlay a, .overlay div {
@@ -31,14 +34,25 @@
     font-weight: 700;
     cursor: pointer;
     color: #2a2a2a;
-    display: block;
     transition: 0.3s;
   }
 
-  .overlay a:hover,
+  .overlay-content > a {
+    margin: 10px 0px;
+    background-color: #c79b66;
+    width: 70%;
+    border-radius: 15px;
+  }
+  .overlay-content > a:hover,
+  .overlay-content > a:focus {
+    background-color: #7e592b;
+    color: black;
+  }
+
+  /* .overlay a:hover,
   .overlay a:focus {
     color: #000000;
-  }
+  } */
 
   .overlay .closebtn {
     position: absolute;
