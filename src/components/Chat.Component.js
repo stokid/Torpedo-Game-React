@@ -15,10 +15,11 @@ const Chat = () => {
     const { status } = useStatusContext();
     const { statusSetMessages, resetStatusTempMessage } = useStatusSetMessage();
 
-    const chatMessagesRef = useRef()
+    const chatMessagesRef = useRef();
+    const messageInput = useRef();
 
     const [messages, setMessages] = useState([]);
-    const [actualMessage, setActualMessage] = useState("");
+    /* const [actualMessage, setActualMessage] = useState(""); */
 
     //Scroll down to the newest messages
     useEffect(() => {
@@ -63,9 +64,9 @@ const Chat = () => {
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [status.tempMessages]);
 
-    const handleInput = (e) => {
+    /* const handleInput = (e) => {
         setActualMessage(e.target.value)
-    }
+    } */
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -78,13 +79,13 @@ const Chat = () => {
             } else {
                 playerID = status.players[1].playerID;
             }
-            const newMessageObj = addChatMessage(playerID, 3, actualMessage);
+            const newMessageObj = addChatMessage(playerID, 3, messageInput.current.value);
             statusSetMessages(newMessageObj);
             const formattedMessage = formMessage(newMessageObj, status.players);
             setMessages([...messages, formattedMessage]);
 
             // Clear input
-            setActualMessage('');
+            messageInput.current.value = "";
 
         } else {
             console.error('You have to set players!')
@@ -98,7 +99,7 @@ const Chat = () => {
                 {messages.length > 0 && <Message messages={messages} />}
             </div>
             <form id="messageForm" className="messageForm" action="" method="" autoComplete="off" onSubmit={handleSubmit}>
-                <input id="messageInput" className="messageInput font-w-normal" type="text" required value={actualMessage} onChange={handleInput} />
+                <input id="messageInput" className="messageInput font-w-normal" type="text" required ref={messageInput} />
                 <input id="messageSubmit" className="messageSubmit" type="submit" value="Küldés" />
             </form>
         </div>
