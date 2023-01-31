@@ -29,8 +29,10 @@ const Describe = () => {
                         </h3>
                         <p>
                             A hajókat vízszintesen, vagy függőlegesen tudod lerakni.
-                            Ha elkezdted egyik irányba, onnantól az egymást követő mezőkre kattintva jelöld ki a hajó teljes hosszát.
-                            Az üzenőfalon mindig kapsz értesítést, melyik hajót kell éppen leraknod.
+                            Ha elkezdted egyik irányba, onnantól az egymást követő mezőkre kattintva jelöld ki a hajó teljes hosszát. 
+                            A kijelölt négyzetek <span className="darkRed">bordó</span> színűvé bordó színűvé válnak.
+                            Miután kijelölted az aktuális hajó teljes hosszát, üzenőfalon mindig kapsz értesítést, melyik a soron következő.
+                            Ha az utolsó hajó pozícióját megadtad, add át a lehetőséget az ellenfelednek.
                             Amennyiben elrontottál valamit, nyugodtan frissítsd a oldalt, utána elölről kezdheted az összes hajó lerakását.
                         </p>
                     </li>
@@ -45,9 +47,9 @@ const Describe = () => {
                         </h3>
                         <p>
                             Miután mindkét játékos lerakta a hajóit, indulhat a csata. A játékosok felváltva jelölik ki a kiválasztott mezőket.
-                            Ha egy mezőn nem található hajó, kék színűvé válik.
-                            Ha eltalált egy hajót, pirossá válik.
-                            Amennyiben a hajó minden mezőjét eltalálta, bordó színű lesz minden mezője.
+                            Ha egy mezőn nem található hajó, <span className="blue">kék</span> színűvé válik.
+                            Ha eltalált egy hajót, <span className="darkGreen">zöldé</span> válik.
+                            Amennyiben a hajó minden mezőjét eltaláltad, <span className="green">világosabb zöld</span> színű lesz minden mezője.
                         </p>
                     </li>
                     <li>
@@ -56,6 +58,7 @@ const Describe = () => {
                         </h3>
                         <p>
                             Ha az egyik játékos elsüllyesztette az ellenfél összes hajóját, a játéknak vége.
+                            Ezután a menüpontban tudsz új játékot indítani.
                         </p>
                     </li>
                     <li>
@@ -70,7 +73,7 @@ const Describe = () => {
                                 <p>
                                     Hossza: 4 egység
                                 </p>
-                                <img src="images/mothership_horizontal.png" alt="" />
+                                <img src="images/mothership_horizontal.png" alt="webgames-battleship-mothership" />
                             </li>
                             <li>
                                 <h4>
@@ -79,7 +82,7 @@ const Describe = () => {
                                 <p>
                                     Hossza: 3 egység
                                 </p>
-                                <img src="images/frigate_horizontal_216x72.png" alt="" />
+                                <img src="images/frigate_horizontal_216x72.png" alt="webgames-battleship-frigate" />
                             </li>
                             <li>
                                 <h4>
@@ -88,7 +91,7 @@ const Describe = () => {
                                 <p>
                                     Hossza: 2 egység
                                 </p>
-                                <img src="images/Arleigh_Burke-class_destroyer_horizontal_144x75.png" alt="" />
+                                <img src="images/Arleigh_Burke-class_destroyer_horizontal_144x75.png" alt="webgames-battleship-destroyer" />
                             </li>
                             <li>
                                 <h4>
@@ -97,7 +100,7 @@ const Describe = () => {
                                 <p>
                                     Hossza: 2 egység
                                 </p>
-                                <img src="images/cruiser_horizontal_216x72.png" alt="" />
+                                <img src="images/cruiser_horizontal_216x72.png" alt="webgames-battleship-cruiser" />
                             </li>
                         </ul>
                     </li>

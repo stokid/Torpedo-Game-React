@@ -3,7 +3,28 @@
     flex-direction: column;
     align-items: center;
 }
-.Describe > ul {
+
+.Describe>ul {
     list-style-type: none;
     padding: 20px;
+}
+
+.blue {
+    color: rgb(40, 213, 213);
+    font-weight: bold;
+}
+
+.darkRed {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.darkGreen {
+    color: green;
+    font-weight: bold;
+}
+
+.green {
+    color: #36bf63;
+    font-weight: bold;
 }
