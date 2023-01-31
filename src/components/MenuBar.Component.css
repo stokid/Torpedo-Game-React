@@ -38,6 +38,7 @@
   }
 
   .overlay-content > a {
+    font-family: 'Dosis', sans-serif;
     margin: 10px 0px;
     background-color: #c79b66;
     width: 70%;
