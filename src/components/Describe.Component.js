@@ -30,8 +30,8 @@ const Describe = () => {
                         <p>
                             A hajókat vízszintesen, vagy függőlegesen tudod lerakni.
                             Ha elkezdted egyik irányba, onnantól az egymást követő mezőkre kattintva jelöld ki a hajó teljes hosszát. 
-                            A kijelölt négyzetek <span className="darkRed">bordó</span> színűvé bordó színűvé válnak.
-                            Miután kijelölted az aktuális hajó teljes hosszát, üzenőfalon mindig kapsz értesítést, melyik a soron következő.
+                            A kijelölt négyzetek <span className="darkRed">bordó</span> színűvé válnak.
+                            Miután kijelölted az aktuális hajó teljes hosszát, az üzenőfalon mindig kapsz értesítést, melyik a soron következő.
                             Ha az utolsó hajó pozícióját megadtad, add át a lehetőséget az ellenfelednek.
                             Amennyiben elrontottál valamit, nyugodtan frissítsd a oldalt, utána elölről kezdheted az összes hajó lerakását.
                         </p>
