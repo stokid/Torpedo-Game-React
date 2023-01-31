@@ -38,7 +38,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I have just made a classic Torpedo game from our childhood. It is a two-person game which playable on PC or smartpfone.
+I have just made a classic Torpedo / Battleship game from our childhood. It is a two-person game which playable on PC or smartpfone.
 The game's screen can orient your device on every refresh. So you can play on stationary also landscape screen.
 The game has a chat component where the Bot helps you what you have to do.
 
@@ -62,7 +62,7 @@ The page's language available just Hungarian at now, but also prepared in Englis
 <!-- GETTING STARTED -->
 ## Getting Started
 
-You can run the app only your OS, or it also can be run in Docker container.
+You can run the app on your OS, or it also can be run in Docker container. If you would like run in Docker, you don not have to install npm package, because of Docker do it when image is created.
 
 ### Prerequisites
 
