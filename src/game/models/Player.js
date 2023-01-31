@@ -3,7 +3,7 @@ import { Ship, ships } from "./Ship";
 export let players = [];
 
 export function addPlayer(playerID, name, isAtcive, playStatus, inputships, revealedCoordinates, inputSunkenShips) {
-    
+
     if (players.length > 1) {
         return;
     }
@@ -36,7 +36,7 @@ export function getCurrentPlayer() {
 }
 export function getOtherPlayer() {
     const otherPlayer = players.filter(player => player.isAtcive === false);
-    
+
     return otherPlayer[0];
 }
 export function changePlayer() {
@@ -77,13 +77,15 @@ class Player {
         }
         if (this.coordinatesPuffer.length === 1) {
             if (!this.lineType) {
-                if (this.coordinatesPuffer[0][0] + 1 === coordinate[0] || this.coordinatesPuffer[0][0] - 1 === coordinate[0]) {
+                if ((this.coordinatesPuffer[0][0] + 1 === coordinate[0] || this.coordinatesPuffer[0][0] - 1 === coordinate[0]) &&
+                    this.coordinatesPuffer[0][1] === coordinate[1]) {
                     this.lineType = 1;
-                } else if (this.coordinatesPuffer[0][1] + 1 === coordinate[1] || this.coordinatesPuffer[0][1] - 1 === coordinate[1]) {
+                } else if ((this.coordinatesPuffer[0][1] + 1 === coordinate[1] || this.coordinatesPuffer[0][1] - 1 === coordinate[1]) &&
+                    this.coordinatesPuffer[0][0] === coordinate[0]) {
                     this.lineType = 2;
                 } else {
                     console.error('At start, it is not known vertical or horizontal! ');
-                    return {senderID: -1, type: -4, text: 'Ez a kiinduló pont. Kezd el - függőlegesen, vagy vízszintesen - sorban lerakni a hajó részeit!'}; // Invalid field! 
+                    return { senderID: -1, type: -4, text: 'A hajó részeit függőlegesen, vagy vízszintesen tudod elhelyezni egymást követő mezőkre kattintva!' }; // Invalid field! 
                 }
             }
         }
@@ -96,7 +98,7 @@ class Player {
                 if (player.ships[i].coordinates[j].every((element, index) => (element === coordinate[index]))) {
                     isOccupied = true;
                     console.error('This filed is occupied!')
-                    return {senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!'} ; // Invalid field!
+                    return { senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!' }; // Invalid field!
                 }
             }
         }
@@ -105,35 +107,35 @@ class Player {
             if (this.coordinatesPuffer[i].every((element, index) => (element === coordinate[index]))) {
                 isOccupied = true;
                 console.error('This filed is occupied!')
-                return {senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!'}; // Invalid field!
+                return { senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!' }; // Invalid field!
             }
         }
 
         if (isOccupied) {
             console.error('This filed is occupied!')
-            return {senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!'}; // Invalid field!
+            return { senderID: -1, type: -3, text: 'Ezt a mezőt már kijelölted egyszer!' }; // Invalid field!
         }
         if (this.lineType === 1) {
-            
+
             if (lastCoordinate[1] !== coordinate[1]) {
                 console.error('Line has to be horizontal')
-                return {senderID: -1, type: -2, text: 'Ezt a hajót vízszintesen kell kijelölnöd!'}; // Invalid field!
+                return { senderID: -1, type: -2, text: 'Ezt a hajót vízszintesen kell kijelölnöd!' }; // Invalid field!
             }
             if (lastCoordinate[0] !== coordinate[0] + 1 && lastCoordinate[0] !== coordinate[0] - 1
                 && this.coordinatesPuffer[0][0] !== coordinate[0] + 1 && this.coordinatesPuffer[0][0] !== coordinate[0] - 1) {
                 console.error('This field is too far (horizontal).')
-                return {senderID: -1, type: -2, text: 'A kijelölt mező túl messze van az utolsónak lerakotthoz képest!'}; // Invalid field!
+                return { senderID: -1, type: -2, text: 'A kijelölt mező túl messze van az utolsónak lerakotthoz képest!' }; // Invalid field!
             }
         }
         if (this.lineType === 2) {
             if (lastCoordinate[0] !== coordinate[0]) {
                 console.error('Line has to be vertical')
-                return {senderID: -1, type: -2, text: 'Ezt a hajót függőleges irányban kell kijelölnöd!'}; // Invalid field!
+                return { senderID: -1, type: -2, text: 'Ezt a hajót függőleges irányban kell kijelölnöd!' }; // Invalid field!
             }
             if (lastCoordinate[1] !== coordinate[1] + 1 && lastCoordinate[1] !== coordinate[1] - 1
                 && this.coordinatesPuffer[0][1] !== coordinate[1] + 1 && this.coordinatesPuffer[0][1] !== coordinate[1] - 1) {
                 console.error('This field is too far (vertical).')
-                return {senderID: -1, type: -2, text: 'A kijelölt mező túl messze van az utolsónak lerakotthoz képest!'}; // Invalid field!
+                return { senderID: -1, type: -2, text: 'A kijelölt mező túl messze van az utolsónak lerakotthoz képest!' }; // Invalid field!
             }
         }
 
@@ -146,12 +148,12 @@ class Player {
             this.ships.push(newShip);
             if (this.ships.length === ships.length) {
                 player.playStatus = kindOfPlayStatus[1]; // onPlay
-                return {senderID: -1, type: 2, text: 'Sikeresen elhelyezted a hajóidat.'};
+                return { senderID: -1, type: 2, text: 'Sikeresen elhelyezted a hajóidat.' };
             }
-            
-            return {senderID: -1, type: 1, text: 'Successul newShip.'};
+
+            return { senderID: -1, type: 1, text: 'Successul newShip.' };
         }
-        return {senderID: -1, type: 0, text: 'Added coordinate.'}; // Added a coordinate
+        return { senderID: -1, type: 0, text: 'Added coordinate.' }; // Added a coordinate
     }
 
     addShip(shipID, coordinates, isSunken, shotoutCoordinates) {
@@ -167,7 +169,7 @@ class Player {
         const otherPlayer = getOtherPlayer();
         if (otherPlayer.revealedCoordinates.length > 0) {
             for (let revCoordinate of otherPlayer.revealedCoordinates) {
-                if (revCoordinate.every( (element, index) => element === shotCoordinate[index])) {
+                if (revCoordinate.every((element, index) => element === shotCoordinate[index])) {
                     console.error(' ------------------- shotShips This coordinate has been revealed; ')
                     return -4; // This coordinate has been revealed;
                 }
@@ -176,15 +178,15 @@ class Player {
         otherPlayer.revealedCoordinates.push(shotCoordinate);
         let result;
         for (let ship of otherPlayer.ships) {
-    
+
             result = ship.shot2(shotCoordinate);
-           
+
             if (result === 2) {
-               
+
                 const index = otherPlayer.ships.indexOf(ship);
                 otherPlayer.sunkenShips.push(ship);
                 otherPlayer.ships.splice(index, 1);
-              
+
                 if (otherPlayer.ships.length === 0) {
                     result = 1000; // WINNER
                     otherPlayer.playStatus = kindOfPlayStatus[3];
@@ -202,7 +204,7 @@ class Player {
         }
         return result;
     }
-    
+
     checkDefeat() {
         let result;
         for (const ship of this.ships) {
