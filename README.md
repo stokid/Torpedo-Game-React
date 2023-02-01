@@ -46,11 +46,11 @@ The game has a chat component where the Bot helps you what you have to do.
 ## Project preview
 
 <p align="center">
-   <img width="19.2%" alt="01" src=""> 
-   <img width="19.2%" alt="02" src=""> 
-   <img width="19.2%" alt="03" src=""> 
-   <img width="19.2%" alt="04" src=""> 
-   <img width="19.2%" alt="05" src=""> 
+   <img width="19.2%" alt="01" src="https://user-images.githubusercontent.com/45713192/216114872-2ee870f0-3478-4599-92e3-77eb2b69e9cb.PNG"> 
+   <img width="19.2%" alt="02" src="https://user-images.githubusercontent.com/45713192/216117126-b50604b6-31d5-476c-8c83-ce6ebfe5ce6d.PNG"> 
+   <img width="19.2%" alt="03" src="https://user-images.githubusercontent.com/45713192/216117312-94748a13-e997-46b4-8d3e-c56c35af088f.PNG"> 
+   <img width="19.2%" alt="04" src="https://user-images.githubusercontent.com/45713192/216122225-ef8d767a-e93b-4176-8614-397b07eb8895.PNG"> 
+   <img width="19.2%" alt="05" src="https://user-images.githubusercontent.com/45713192/216122009-b221b361-baf3-4968-9b41-ca8d7c1b838d.png"> 
 </p>
 
 ## Languages
