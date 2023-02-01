@@ -34,6 +34,7 @@ const MenuBar = () => {
                         <Link to='/' onClick={closeNav}>Játék</Link>
                         <Link to='/describe' onClick={closeNav}>Leírás</Link>
                         <Link to='/' onClick={handleNewGame} > Új játék</Link>
+                        <a href={process.env.REACT_APP_GITHUB_REPO_URL} onClick={closeNav}>GITHUB Repo</a>
                         <a href={process.env.REACT_APP_HOME_PAGE_URL + '/play'} onClick={closeNav}>Kilépés</a>
                     </div>
                 </div>
