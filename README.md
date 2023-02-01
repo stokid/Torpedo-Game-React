@@ -39,7 +39,7 @@
 ## About The Project
 
 I have just made a classic Torpedo / Battleship game from our childhood. It is a two-person game which playable in browser with PC or Smartphone.
-The game's screen can orient your device on every refresh. So you can play on stationary also landscape screen.
+The game's screen can orient your device when you refresh the page. So you can play on stationary also landscape screen.
 The game has a chat component where the Bot helps you what you have to do.
 
 <!-- PROJECT PREVIEW -->
