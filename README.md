@@ -95,11 +95,11 @@ You can run the app on your OS, or it also can be run in Docker container. If yo
 #### Start container:
 ###### On Windows:
  ```sh
-   docker container run -p 3000:3000 -v ${PWD}:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react
+   docker container run -p 3000:3000 -v ${PWD}:/frontend/torpedo -v /frontend/torpedo/node_modules -v /frontend/torpedo/.git --name torpedo-game-react-app torpedo-game-react
    ```
 ###### On Mac:
 ```sh
-   docker container run -p 3000:3000 -v $PWD:/torpedo -v /node_modules --name torpedo-game-react-app  torpedo-game-react
+   docker container run -p 3000:3000 -v $PWD:/frontend/torpedo -v /frontend/torpedo/node_modules -v /frontend/torpedo/.git --name torpedo-game-react-app torpedo-game-react
    ```
 
 
