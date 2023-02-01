@@ -81,7 +81,7 @@ You can run the app on your OS, or it also can be run in Docker container. If yo
    ```sh
    npm install
    ```
-4. Start the app`
+4. Start the app
    ```js
    npm start
    ```
