@@ -51,6 +51,7 @@ const Torpedo = () => {
             const message = addChatMessage(-1, 1, 'Csata!!!')
             statusSetTempMessage(message);
         }
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [status.settingsCondition]);
 
     //Game event messages
@@ -157,7 +158,7 @@ const Torpedo = () => {
         //Put down ships
         if (clickBoardIsActive && status.settingsCondition < 4) {
             const result = addPlayerShips(actualPlayer, coordinate);
-            
+
             if (result.type < 0) {
                 const message = addChatMessage(result.senderID, result.type, result.text)
                 statusSetTempMessage(message);
