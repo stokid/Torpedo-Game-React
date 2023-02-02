@@ -61,11 +61,11 @@ const Torpedo = () => {
             if (shipEventID === 0) {
                 tempMessage = `${actualPlayer.name}, helyezd el az anyahajót!\n Hossza: 4`;
             } else if (shipEventID === 1) {
-                tempMessage = `${actualPlayer.name}, helyezd el az cirkálót!\n Hossza: 3`;
+                tempMessage = `${actualPlayer.name}, helyezd el a cirkálót!\n Hossza: 3`;
             } else if (shipEventID === 3) {
-                tempMessage = `${actualPlayer.name}, helyezd el az rombolót!\n Hossza: 2`;
+                tempMessage = `${actualPlayer.name}, helyezd el a rombolót!\n Hossza: 2`;
             } else if (shipEventID === 2) {
-                tempMessage = `${actualPlayer.name}, helyezd el az fregattot!\n Hossza: 2`;
+                tempMessage = `${actualPlayer.name}, helyezd el a fregattot!\n Hossza: 2`;
             }
         }
         //Set message if someone has won.
