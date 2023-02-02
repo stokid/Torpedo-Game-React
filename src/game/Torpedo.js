@@ -45,7 +45,11 @@ const Torpedo = () => {
         setNotification(true);
 
         if (status.settingsCondition >= 2) {
-            setTimeout(notificationComponentTimeoutFunction, 1000);
+            setTimeout(notificationComponentTimeoutFunction, 2000);
+        }
+        if (status.settingsCondition === 4) {
+            const message = addChatMessage(-1, 1, 'Csata!!!')
+            statusSetTempMessage(message);
         }
     }, [status.settingsCondition]);
 
@@ -54,13 +58,13 @@ const Torpedo = () => {
         let tempMessage;
         if (status.settingsCondition < 4) {
             if (shipEventID === 0) {
-                tempMessage = 'Helyezd el az anyahajót!\n Hossza: 4';
+                tempMessage = `${actualPlayer.name}, helyezd el az anyahajót!\n Hossza: 4`;
             } else if (shipEventID === 1) {
-                tempMessage = 'Helyezd el az cirkálót!\n Hossza: 3';
+                tempMessage = `${actualPlayer.name}, helyezd el az cirkálót!\n Hossza: 3`;
             } else if (shipEventID === 3) {
-                tempMessage = 'Helyezd el az rombolót!\n Hossza: 2';
+                tempMessage = `${actualPlayer.name}, helyezd el az rombolót!\n Hossza: 2`;
             } else if (shipEventID === 2) {
-                tempMessage = 'Helyezd el az fregattot!\n Hossza: 2';
+                tempMessage = `${actualPlayer.name}, helyezd el az fregattot!\n Hossza: 2`;
             }
         }
         //Set message if someone has won.
